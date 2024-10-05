@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+
+     <form action="signup.php" method="POST" class="w-25 bg-warning p-3" onsubmit="return validate()">
+        <h3 class="text-center">Sign up here</h3>
+
+        <input type="text" name="username" placeholder="username" class="form-control mt-2" required>
+        <input type="password" name="pass1" placeholder="password" class="form-control mt-2" required id="pass1">
+        <input type="password" name="pass2" placeholder="retype-password" class="form-control mt-2" required id="pass2">
+       
+
+        <select name="usertype" class="form-control mt-2" required>
+            <option value="vendor">Vendor</option>
+            <option value="customer">Customer</option>
+        </select>
+
+        <button class="mt-3 form-control btn btn-success">signup</button>
+        <div class="text-end">
+            <a class="text-dark" href="login.html">Login here...</a>
+           </div>
+     </form>
+
+    </div>
+
+    <script>
+        function validate(){
+            pass1obj=document.getElementById("pass1")
+            pass2obj=document.getElementById("pass2")
+
+            if(pass1obj.value==pass2obj.value){
+                return true;
+            }
+            else{
+                alert("Password didn't match");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
