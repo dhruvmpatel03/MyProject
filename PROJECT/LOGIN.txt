@@ -1,4 +1,0 @@
-OWNER SIDE : http://localhost/PROJECT/owner/owner_login.php
-
-
-CUSTOMER SIDE : http://localhost/PROJECT/customer/customer_login.php
